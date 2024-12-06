@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans&family=Roboto&display=swap');
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: grey;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+}
+.container {
+  margin: 0 auto;
+  display: block;
+  min-width: 768px;
+  width: 70vw;
+}
+.keyboard {
+  position: relative;
+  background-color: rgb(234, 234, 234);
+  border-radius: 1em;
+  box-shadow: inset 0.2em 0.2em rgba(255, 255, 255, 0.191), 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+.keys-wrapper {
+  padding: 0.5em;
+  display: grid;
+  gap: 0.25em;
+  grid-template-columns: repeat(64, 1fr);
+  aspect-ratio: 3.5;
+}
+.key {
+  font-size: clamp(0.625rem, 0.3125rem + 1vw, 0.875rem);
+  padding: 0.25em;
+  border: 1px solid rgba(0, 0, 0, 0.387);
+  grid-column: span 4;
+  grid-row: span 2;
+  border-radius: 0.3em;
+  background-image: linear-gradient(to bottom, #00000015, #ffffff40); /* Gradient from left to right */
+
+  box-shadow: inset 0.2em 0.2em rgba(255, 255, 255, 0.095), 2px 4px 0px rgba(0, 0, 0, 0.1);
+  transition: all 100ms ease-in-out;
+}
+
+.key:hover {
+  color: white;
+  background-color: blue;
+}
+
+.r-1 {
+  grid-row-start: 1;
+}
+
+.r-2 {
+  grid-row-start: 2;
+}
+.r-3 {
+  grid-row-start: 3;
+}
+.r-4 {
+  grid-row-start: 4;
+}
+
+.r-5 {
+  grid-row-start: 5;
+}
+
+.k-esc {
+}
+
+.k-enter {
+  grid-column: span 10;
+  grid-row: span 2;
+}
+.k-shift-l,
+.k-ctrl-l,
+.k-ctrl-r,
+.k-alt,
+.k-alt-gr,
+.k-win,
+.k-fn-1,
+.k-fn-2 {
+  grid-column: span 5;
+}
+
+.k-caps-lock,
+.k-tab {
+  grid-column: span 6;
+}
+
+.k-shift-r {
+  grid-column: span 15;
+}
+.k-spacebar {
+  grid-column: span 29;
+}
+
+.k-del {
+  grid-column: span 12;
+}
+
+.k-tab {
+  grid-column: span 6;
+}
